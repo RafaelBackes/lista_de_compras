@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+li{
+    margin-top: 15px;
+}
+
+li > button {
+    margin-left: 5px;
+    
+}
+body{
+    color: blue;
+}
