@@ -19,3 +19,13 @@ li > button {
 body{
     color: blue;
 }
+/* Estilo para a lista */
+.lista li {
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.5s ease-in; /* Transição suave */
+}
+
+/* Classe para mostrar o item */
+.show {
+    opacity: 1; /* Fica visível */
+}
