@@ -1,31 +1,128 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-li{
-    margin-top: 15px;
+    height: 100vh;
 }
 
-li > button {
-    margin-left: 5px;
-    
-}
-body{
-    color: blue;
-}
-/* Estilo para a lista */
-.lista li {
-    opacity: 0; /* Começa invisível */
-    transition: opacity 0.5s ease-in; /* Transição suave */
+/* Container centralizado */
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
 }
 
-/* Classe para mostrar o item */
-.show {
-    opacity: 1; /* Fica visível */
+/* Título principal */
+h1 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 24px;
 }
+
+/* Estilo do formulário */
+.form {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Estilo do campo de entrada */
+input[type="text"] {
+    padding: 0.75rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilo do botão de adicionar */
+button#adicionar {
+    padding: 0.75rem 1.5rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#adicionar:hover {
+    background-color: #218838;
+}
+
+/* Estilos da lista */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+/* Estilo dos itens da lista */
+li {
+    background-color: #f8f9fa;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+/* Animação para quando o item é exibido */
+li.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilo do botão remover */
+button.remover {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.remover:hover {
+    background-color: #c82333;
+}
+
+/* Estilo de transição para quando o item é removido */
+li.removed {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
